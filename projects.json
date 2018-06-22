@@ -1,16 +1,16 @@
 {
-    "title": "项目列表",
-    "description": "列出所有项目",
-    "data": [
-        {
-            "icon": "✅",
-            "name": "项目A",
-            "opRefresh": "\u273A"
-        },
-        {
-          "icon": "✅",
-          "name": "项目B",
-          "opRefresh": "\ue415"
-        }
-    ]
+  "title": "项目列表",
+  "description": "列出所有项目",
+  "data": [
+    {
+      "icon": "\ue21a",
+      "name": "项目A",
+      "opRefresh": "\ue447"
+    },
+    {
+      "icon": "\ue219",
+      "name": "项目B",
+      "opRefresh": "\ue447"
+    }
+  ]
 }
