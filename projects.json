@@ -11,6 +11,16 @@
       "icon": "\uE107",
       "name": "项目B",
       "opRefresh": "\uE32E"
+    },
+    {
+      "icon": "\uE057",
+      "name": "项目C",
+      "opRefresh": "\uE32E"
+    },
+    {
+      "icon": "\uE057",
+      "name": "项目D",
+      "opRefresh": "\uE32E"
     }
   ]
 }
