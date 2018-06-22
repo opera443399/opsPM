@@ -3,12 +3,12 @@
   "description": "列出所有项目",
   "data": [
     {
-      "icon": "\u1F60A",
+      "icon": "\uE057",
       "name": "项目A",
       "opRefresh": "\ue447"
     },
     {
-      "icon": "\u1F60A",
+      "icon": "\uE107",
       "name": "项目B",
       "opRefresh": "\ue447"
     }
