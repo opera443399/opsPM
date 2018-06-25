@@ -5,18 +5,16 @@
     {
       "projectIcon": "\uE329",
       "projectName": "项目A",
-      "projectFlag": "1",
+      "projectFlag": "\ueb64",
       "projectStatus": "[4/4]",
-      "opRefresh": "\uE327",
-      "opLog": "\uE419"
+      "opLog": "\ue4fd"
     },
     {
       "projectIcon": "\uE32E",
       "projectName": "项目B",
-      "projectFlag": "0",
-      "projectStatus": "[4/4]",
-      "opRefresh": "\uE327",
-      "opLog": "\uE419"
+      "projectFlag": "\ueb63",
+      "projectStatus": "[1/2]",
+      "opLog": "\ue4fd"
     }
   ]
 }
