@@ -3,18 +3,18 @@
   "description": "我的项目",
   "data": [
     {
-      "projectIcon": "\uE329",
+      "projectIcon": "\uD83D\uDC98",
       "projectName": "项目A",
-      "projectFlag": "\ueb64",
+      "projectFlag": "\uD83D\uDD35",
       "projectStatus": "[4/4]",
-      "opLog": "\ue4fd"
+      "opLog": "\uD83D\uDCC4"
     },
     {
-      "projectIcon": "\uE32E",
+      "projectIcon": "\uD83C\uDFB6",
       "projectName": "项目B",
-      "projectFlag": "\ueb63",
+      "projectFlag": "\uD83D\uDD34",
       "projectStatus": "[1/2]",
-      "opLog": "\ue4fd"
+      "opLog": "\uD83D\uDCC4"
     }
   ]
 }
