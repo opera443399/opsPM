@@ -3,24 +3,20 @@
   "description": "我的项目",
   "data": [
     {
-      "icon": "\uE057",
-      "name": "项目A",
-      "opRefresh": "\uE32E"
+      "projectIcon": "\uE329",
+      "projectName": "项目A",
+      "projectFlag": "1",
+      "projectStatus": "[4/4]",
+      "opRefresh": "\uE327",
+      "opLog": "\uE419"
     },
     {
-      "icon": "\uE107",
-      "name": "项目B",
-      "opRefresh": "\uE32E"
-    },
-    {
-      "icon": "\uE057",
-      "name": "项目C",
-      "opRefresh": "\uE32E"
-    },
-    {
-      "icon": "\uE057",
-      "name": "项目D",
-      "opRefresh": "\uE32E"
+      "projectIcon": "\uE32E",
+      "projectName": "项目B",
+      "projectFlag": "0",
+      "projectStatus": "[4/4]",
+      "opRefresh": "\uE327",
+      "opLog": "\uE419"
     }
   ]
 }
