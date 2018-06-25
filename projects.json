@@ -6,14 +6,14 @@
       "projectIcon": "\uD83D\uDC98",
       "projectName": "项目A",
       "projectFlag": "\uD83D\uDD35",
-      "projectStatus": "[4/4]",
+      "projectStatus": "4",
       "opLog": "\uD83D\uDCC4"
     },
     {
       "projectIcon": "\uD83C\uDFB6",
       "projectName": "项目B",
       "projectFlag": "\uD83D\uDD34",
-      "projectStatus": "[1/2]",
+      "projectStatus": "2",
       "opLog": "\uD83D\uDCC4"
     }
   ]

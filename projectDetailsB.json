@@ -1,0 +1,20 @@
+{
+  "title": "微服务列表",
+  "description": "项目B",
+  "data": [
+    {
+      "projectIcon": "\uD83C\uDFB6",
+      "projectName": "微服务01",
+      "projectFlag": "\uD83D\uDD35",
+      "projectStatus": "1/1",
+      "opLog": "\uD83D\uDCC4"
+    },
+    {
+      "projectIcon": "\uD83C\uDFB6",
+      "projectName": "微服务02",
+      "projectFlag": "\uD83D\uDD34",
+      "projectStatus": "0/2",
+      "opLog": "\uD83D\uDCC4"
+    }
+  ]
+}
