@@ -1,18 +1,18 @@
 {
-  "title": "微服务列表",
-  "description": "项目B",
+  "projectID": "102",
+  "projectName": "项目B",
   "data": [
     {
       "ServiceID": "S001",
       "ServiceName": "微服务01",
       "ServiceFlag": "\uD83D\uDD35",
-      "ServiceStatus": "1/1",
+      "ServiceStatus": "1/1"
     },
     {
       "ServiceID": "S002",
       "ServiceName": "微服务02",
       "ServiceFlag": "\uD83D\uDD34",
-      "ServiceStatus": "0/2",
+      "ServiceStatus": "0/2"
     }
   ]
 }
