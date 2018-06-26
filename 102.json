@@ -3,18 +3,16 @@
   "description": "项目B",
   "data": [
     {
-      "projectIcon": "\uD83C\uDFB6",
-      "projectName": "微服务01",
-      "projectFlag": "\uD83D\uDD35",
-      "projectStatus": "1/1",
-      "opLog": "\uD83D\uDCC4"
+      "ServiceID": "S001",
+      "ServiceName": "微服务01",
+      "ServiceFlag": "\uD83D\uDD35",
+      "ServiceStatus": "1/1",
     },
     {
-      "projectIcon": "\uD83C\uDFB6",
-      "projectName": "微服务02",
-      "projectFlag": "\uD83D\uDD34",
-      "projectStatus": "0/2",
-      "opLog": "\uD83D\uDCC4"
+      "ServiceID": "S002",
+      "ServiceName": "微服务02",
+      "ServiceFlag": "\uD83D\uDD34",
+      "ServiceStatus": "0/2",
     }
   ]
 }
