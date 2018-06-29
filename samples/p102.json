@@ -1,17 +1,17 @@
 {
-  "projectID": "102",
+  "projectID": "p102",
   "projectName": "项目B",
   "data": [
     {
-      "ServiceID": "S001",
+      "ServiceID": "s001",
       "ServiceName": "微服务01",
-      "ServiceFlag": "\uD83D\uDD35",
+      "ServiceFlag": "0",
       "ServiceStatus": "1/1"
     },
     {
-      "ServiceID": "S002",
+      "ServiceID": "s002",
       "ServiceName": "微服务02",
-      "ServiceFlag": "\uD83D\uDD34",
+      "ServiceFlag": "1",
       "ServiceStatus": "0/2"
     }
   ]

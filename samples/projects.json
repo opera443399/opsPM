@@ -1,22 +1,20 @@
 {
   "title": "项目列表",
-  "description": "我的项目",
+  "env": "开发环境",
   "data": [
     {
       "projectIcon": "\uD83D\uDC98",
-      "projectID": "101",
+      "projectID": "p101",
       "projectName": "项目A",
-      "projectFlag": "\uD83D\uDD35",
-      "projectStatus": "4",
-      "opLog": "\uD83D\uDCC4"
+      "projectFlag": "0",
+      "projectStatus": "4"
     },
     {
       "projectIcon": "\uD83C\uDFB6",
-      "projectID": "102",
+      "projectID": "p102",
       "projectName": "项目B",
-      "projectFlag": "\uD83D\uDD34",
-      "projectStatus": "2",
-      "opLog": "\uD83D\uDCC4"
+      "projectFlag": "1",
+      "projectStatus": "2"
     }
   ]
 }
