@@ -3,18 +3,18 @@
   "projectName": "项目B",
   "data": [
     {
-      "ServiceID": "s001",
-      "ServiceName": "微服务01",
-      "ServiceFlag": "0",
-      "ServiceVersion": "v0.1",
-      "ServiceStatus": "1/1"
+      "serviceID": "s001",
+      "serviceName": "微服务01",
+      "serviceFlag": "0",
+      "serviceVersion": "v0.1",
+      "serviceStatus": "1/1"
     },
     {
-      "ServiceID": "s002",
-      "ServiceName": "微服务02",
-      "ServiceFlag": "1",
-      "ServiceVersion": "v0.2",
-      "ServiceStatus": "0/2"
+      "serviceID": "s002",
+      "serviceName": "微服务02",
+      "serviceFlag": "1",
+      "serviceVersion": "v0.2",
+      "serviceStatus": "0/2"
     }
   ]
 }
