@@ -11,8 +11,12 @@ import { createStackNavigator } from 'react-navigation';
 
 import styles from './css'
 
-let uriPrefixProjects = 'https://raw.githubusercontent.com/opera443399/opsPM/master/samples/';
-let uriJsonProjects = uriPrefixProjects + 'projects.json';
+const uriPrefixProjects = 'https://raw.githubusercontent.com/opera443399/opsPM/master/samples/';
+const uriJsonProjects = uriPrefixProjects + 'projects.json';
+const flagOn = '\uD83D\uDD35';
+const flagOff = '\uD83D\uDD34';
+const defaultIconProject = '\uD83C\uDFB6';
+const defaultIconLog = '\uD83D\uDCC4'
 
 type Props = {};
 class ProjectListScreen extends Component<Props> {
@@ -43,7 +47,7 @@ class ProjectListScreen extends Component<Props> {
       console.log('responseJson = ' + JSON.stringify(responseJson));
       this.setState({
         isLoading: false,
-        subtitle: responseJson.description,
+        projectEnv: responseJson.env,
         dataSource: responseJson.data,
       });
     } catch (error) {
@@ -68,7 +72,7 @@ class ProjectListScreen extends Component<Props> {
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
         <View style={styles.msg}>
-          <Text style={styles.subtitle}>{this.state.subtitle}</Text>
+          <Text style={styles.subtitle}>{this.state.projectEnv}</Text>
         </View>
         <View style={styles.content}>
           <FlatList
@@ -79,7 +83,7 @@ class ProjectListScreen extends Component<Props> {
                   projectIcon: item.projectIcon,
                   projectID: item.projectID,
                   projectName: item.projectName,
-                  opLog: item.opLog
+                  projectEnv: this.state.projectEnv
                 });
               }}>
                 <View style={styles.row}>
@@ -88,11 +92,11 @@ class ProjectListScreen extends Component<Props> {
                   </View>
                   <View style={styles.columnB}>
                     <Text style={styles.projectName}>{item.projectName}</Text>
-                    <Text style={styles.opLog}>{item.opLog}</Text>
+                    <Text style={styles.opLog}>{defaultIconLog}</Text>
                   </View>
                   <View style={styles.columnC}>
                     <Text style={styles.projectStatus}>{item.projectStatus}</Text>
-                    <Text style={styles.projectFlag}>{item.projectFlag}</Text>
+                    <Text style={styles.projectFlag}>{item.projectFlag == '0' ? flagOn : flagOff}</Text>
                   </View>
                 </View>
               </TouchableHighlight>
@@ -114,16 +118,17 @@ class ProjectDetailsScreen extends Component<Props> {
     console.log('@constructor');
     super(props);
     const { navigation } = this.props;
-    const projectIcon = navigation.getParam('projectIcon', '\uD83C\uDFB6');
-    const projectID = navigation.getParam('projectID', 'NO-ID-EXIST');
-    const projectName = navigation.getParam('projectName', 'demo');
-    const opLog = navigation.getParam('opLog', '\uD83D\uDCC4');
+    const projectIcon = navigation.getParam('projectIcon', defaultIconProject);
+    const projectID = navigation.getParam('projectID', 'ID-NOT-FOUND');
+    const projectName = navigation.getParam('projectName', 'NAME-NOT-FOUND');
+    const projectEnv = navigation.getParam('projectEnv', 'EVN-NOT-FOUND');
+
     this.state = {
       isLoading: true,
       projectIcon: projectIcon,
       projectID: projectID,
       projectName: projectName,
-      opLog: opLog
+      projectEnv: projectEnv
     }
   }
 
@@ -168,7 +173,7 @@ class ProjectDetailsScreen extends Component<Props> {
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
         <View style={styles.msg}>
-          <Text style={styles.subtitle}>{this.state.projectName}</Text>
+          <Text style={styles.subtitle}>{this.state.projectName}-{this.state.projectEnv}</Text>
         </View>
         <View style={styles.content}>
           <FlatList
@@ -179,12 +184,12 @@ class ProjectDetailsScreen extends Component<Props> {
                   <Text style={styles.projectIcon}>{this.state.projectIcon}</Text>
                 </View>
                 <View style={styles.columnB}>
-                  <Text style={styles.projectName}>{item.ServiceName}</Text>
-                  <Text style={styles.opLog}>{this.state.opLog}</Text>
+                  <Text style={styles.projectName}>{item.ServiceName} -> {item.ServiceVersion}</Text>
+                  <Text style={styles.opLog}>{defaultIconLog}</Text>
                 </View>
                 <View style={styles.columnC}>
                   <Text style={styles.projectStatus}>{item.ServiceStatus}</Text>
-                  <Text style={styles.projectFlag}>{item.ServiceFlag}</Text>
+                  <Text style={styles.projectFlag}>{item.ServiceFlag == '0' ? flagOn : flagOff}</Text>
                 </View>
               </View>
             )}
