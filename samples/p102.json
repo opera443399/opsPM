@@ -6,12 +6,14 @@
       "ServiceID": "s001",
       "ServiceName": "微服务01",
       "ServiceFlag": "0",
+      "ServiceVersion": "v0.1",
       "ServiceStatus": "1/1"
     },
     {
       "ServiceID": "s002",
       "ServiceName": "微服务02",
       "ServiceFlag": "1",
+      "ServiceVersion": "v0.2",
       "ServiceStatus": "0/2"
     }
   ]
