@@ -6,15 +6,13 @@
       "projectIcon": "\uD83D\uDC98",
       "projectID": "p101",
       "projectName": "项目A",
-      "projectFlag": "0",
-      "projectStatus": "4"
+      "projectFlag": "0"
     },
     {
       "projectIcon": "\uD83C\uDFB6",
       "projectID": "p102",
       "projectName": "项目B",
-      "projectFlag": "1",
-      "projectStatus": "2"
+      "projectFlag": "1"
     }
   ]
 }

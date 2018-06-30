@@ -3,12 +3,12 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     isLoading: {
         flex: 1,
-        padding: 20
+        padding: 20,
     },
     //box0
     container: {
         flex: 1,
-        backgroundColor: 'black'
+        backgroundColor: 'black',
     },
     //box1
     msg: {
@@ -17,8 +17,8 @@ export default StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: 'white',
         borderStyle: 'solid',
-        borderColor: 'black',
-        borderBottomWidth: 1
+        borderColor: 'gray',
+        borderBottomWidth: 1,
     },
     //box1-1
     subtitle: {
@@ -32,7 +32,7 @@ export default StyleSheet.create({
         borderColor: 'black',
         borderBottomWidth: 1,
     },
-    //box2-row
+    //box2-row1
     row: {
         flex: 1,
         flexDirection: 'row',
@@ -40,49 +40,58 @@ export default StyleSheet.create({
         borderStyle: 'solid',
         borderBottomColor: 'gray',
         borderBottomWidth: 1,
-        borderBottomLeftRadius: 20
+        borderBottomLeftRadius: 20,
     },
-    //box2-row-columnA
-    columnA: {
+    //box2-R1-C1
+    box2R1C1: {
         flex: 1,
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
-    //box2-row-columnB
-    columnB: {
+    //box2-R1-C2
+    box2R1C2: {
         flex: 9,
         flexDirection: 'column',
         alignItems: 'flex-start',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
     },
-    //box2-row-columnC
-    columnC: {
+    //box2-R1-C3
+    box2R1C3: {
         flex: 2,
         flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'space-between'
+        alignItems: 'flex-start',
+        justifyContent: 'space-between',
     },
-    //box2-row-columnA-1
+    //box2-R1-C1-A
     projectIcon: {
-        flex: 1
+        flex: 1,
     },
-    //box2-row-columnB-1
+    //box2-R1-C2-A
     projectName: {
-        flex: 1
+        flex: 1,
+        paddingBottom: 10,
     },
-    //box2-row-columnB-2
+    //box2-R1-C2-B
+    Status: {
+        flex: 1,
+    },
+    //box2-R1-C3-A
+    Version: {
+        flex: 1,
+        paddingBottom: 10,
+    },
+    //box2-R1-C3-B
+    box2R1C3B: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+        justifyContent: 'flex-start',
+    },
     opLog: {
         flex: 1,
-        paddingTop: 10
     },
-    //box2-row-columnC-1
-    projectStatus: {
-        flex: 1
-    },
-    //box2-row-columnC-2
     projectFlag: {
         flex: 1,
-        paddingTop: 10
     },
 })

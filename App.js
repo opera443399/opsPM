@@ -5,11 +5,15 @@ import {
   StatusBar,
   Text,
   TouchableHighlight,
-  View
+  View,
+  YellowBox
 } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
 import styles from './css'
+
+//https://github.com/react-navigation/react-navigation/issues/3956
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
 const uriPrefixProjects = 'https://raw.githubusercontent.com/opera443399/opsPM/master/samples/';
 const uriJsonProjects = uriPrefixProjects + 'projects.json';
@@ -87,16 +91,17 @@ class ProjectListScreen extends Component<Props> {
                 });
               }}>
                 <View style={styles.row}>
-                  <View style={styles.columnA}>
+                  <View style={styles.box2R1C1}>
                     <Text style={styles.projectIcon}>{item.projectIcon}</Text>
                   </View>
-                  <View style={styles.columnB}>
+                  <View style={styles.box2R1C2}>
                     <Text style={styles.projectName}>{item.projectName}</Text>
-                    <Text style={styles.opLog}>{defaultIconLog}</Text>
                   </View>
-                  <View style={styles.columnC}>
-                    <Text style={styles.projectStatus}>{item.projectStatus}</Text>
-                    <Text style={styles.projectFlag}>{item.projectFlag == '0' ? flagOn : flagOff}</Text>
+                  <View style={styles.box2R1C3}>
+                    <View style={styles.box2R1C3B}>
+                      <Text style={styles.opLog}>{defaultIconLog}</Text>
+                      <Text style={styles.projectFlag}>{item.projectFlag == '0' ? flagOn : flagOff}</Text>
+                    </View>
                   </View>
                 </View>
               </TouchableHighlight>
@@ -180,16 +185,19 @@ class ProjectDetailsScreen extends Component<Props> {
             data={this.state.dataSource}
             renderItem={({ item }) => (
               <View style={styles.row}>
-                <View style={styles.columnA}>
+                <View style={styles.box2R1C1}>
                   <Text style={styles.projectIcon}>{this.state.projectIcon}</Text>
                 </View>
-                <View style={styles.columnB}>
-                  <Text style={styles.projectName}>{item.ServiceName} -> {item.ServiceVersion}</Text>
-                  <Text style={styles.opLog}>{defaultIconLog}</Text>
+                <View style={styles.box2R1C2}>
+                  <Text style={styles.projectName}>{item.serviceName} </Text>
+                  <Text style={styles.Status}>{item.serviceStatus}</Text>
                 </View>
-                <View style={styles.columnC}>
-                  <Text style={styles.projectStatus}>{item.ServiceStatus}</Text>
-                  <Text style={styles.projectFlag}>{item.ServiceFlag == '0' ? flagOn : flagOff}</Text>
+                <View style={styles.box2R1C3}>
+                  <Text style={styles.Version}>{item.serviceVersion}</Text>
+                  <View style={styles.box2R1C3B}>
+                    <Text style={styles.opLog}>{defaultIconLog}</Text>
+                    <Text style={styles.projectFlag}>{item.serviceFlag == '0' ? flagOn : flagOff}</Text>
+                  </View>
                 </View>
               </View>
             )}
