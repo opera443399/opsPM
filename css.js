@@ -18,6 +18,7 @@ export default StyleSheet.create({
         backgroundColor: 'white',
     },
     error: {
+        flex: 1,
         color: 'red',
     },
     //box1-1

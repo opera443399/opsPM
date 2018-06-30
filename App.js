@@ -72,12 +72,12 @@ class ProjectListScreen extends Component<Props> {
     if (this.state.isLoading) {
       console.log('isLoading => true');
       return (
-        <View style={styles.isLoading}>
+        <View style={styles.msg}>
           <StatusBar barStyle="light-content" />
-          <ActivityIndicator />
-          <View style={styles.msg}>
-            <Text style={styles.error}>{this.state.errMsg}</Text>
+          <View style={styles.isLoading}>
+            <ActivityIndicator />
           </View>
+          <Text style={styles.error}>{this.state.errMsg}</Text>
         </View>
       )
     }
@@ -183,12 +183,12 @@ class ProjectDetailsScreen extends Component<Props> {
     if (this.state.isLoading) {
       console.log('isLoading => true');
       return (
-        <View style={styles.isLoading}>
+        <View style={styles.msg}>
           <StatusBar barStyle="light-content" />
-          <ActivityIndicator />
-          <View style={styles.msg}>
-            <Text style={styles.error}>{this.state.errMsg}</Text>
+          <View style={styles.isLoading}>
+            <ActivityIndicator />
           </View>
+          <Text style={styles.error}>{this.state.errMsg}</Text>
         </View>
       )
     }
