@@ -15,12 +15,12 @@ import styles from './css'
 //https://github.com/react-navigation/react-navigation/issues/3956
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
-const uriPrefixProjects = 'https://raw.githubusercontent.com/opera443399/opsPM/master/samples/';
-const uriJsonProjects = uriPrefixProjects + 'projects.json';
+const uriPrefix = 'https://raw.githubusercontent.com/opera443399/opsPM/master/samples/';
 const flagOn = '\uD83D\uDD35';
 const flagOff = '\uD83D\uDD34';
 const defaultIconProject = '\uD83C\uDFB6';
-const defaultIconLog = '\uD83D\uDCC4'
+const defaultIconLog = '\uD83D\uDCC4';
+const errFetchData = 'failed to fetch data!';
 
 type Props = {};
 class ProjectListScreen extends Component<Props> {
@@ -31,7 +31,10 @@ class ProjectListScreen extends Component<Props> {
   constructor(props) {
     console.log('@constructor');
     super(props);
-    this.state = { isLoading: true }
+    this.state = {
+      isLoading: true,
+      errMsg: '',
+    }
   }
 
   componentDidMount() {
@@ -46,16 +49,21 @@ class ProjectListScreen extends Component<Props> {
   async apiGetData() {
     console.log('@apiGetData');
     try {
-      let response = await fetch(uriJsonProjects);
+      let url = uriPrefix + 'projects.json';
+      let response = await fetch(url);
       let responseJson = await response.json();
       console.log('responseJson = ' + JSON.stringify(responseJson));
       this.setState({
         isLoading: false,
+        errMsg: '',
         projectEnv: responseJson.env,
         dataSource: responseJson.data,
       });
     } catch (error) {
-      console.error(error);
+      this.setState({
+        errMsg: errFetchData,
+      });
+      console.error(errFetchData);
     }
   }
 
@@ -67,6 +75,9 @@ class ProjectListScreen extends Component<Props> {
         <View style={styles.isLoading}>
           <StatusBar barStyle="light-content" />
           <ActivityIndicator />
+          <View style={styles.msg}>
+            <Text style={styles.error}>{this.state.errMsg}</Text>
+          </View>
         </View>
       )
     }
@@ -130,6 +141,7 @@ class ProjectDetailsScreen extends Component<Props> {
 
     this.state = {
       isLoading: true,
+      errMsg: '',
       projectIcon: projectIcon,
       projectID: projectID,
       projectName: projectName,
@@ -149,15 +161,20 @@ class ProjectDetailsScreen extends Component<Props> {
   async apiGetData() {
     console.log('@apiGetData');
     try {
-      let response = await fetch(uriPrefixProjects + this.state.projectID + '.json');
+      let url = uriPrefix + this.state.projectID + '.json';
+      let response = await fetch(url);
       let responseJson = await response.json();
       console.log('responseJson = ' + JSON.stringify(responseJson));
       this.setState({
         isLoading: false,
+        errMsg: '',
         dataSource: responseJson.data,
       });
     } catch (error) {
-      console.error(error);
+      this.setState({
+        errMsg: errFetchData,
+      });
+      console.error(errFetchData);
     }
   }
 
@@ -169,6 +186,9 @@ class ProjectDetailsScreen extends Component<Props> {
         <View style={styles.isLoading}>
           <StatusBar barStyle="light-content" />
           <ActivityIndicator />
+          <View style={styles.msg}>
+            <Text style={styles.error}>{this.state.errMsg}</Text>
+          </View>
         </View>
       )
     }

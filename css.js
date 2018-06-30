@@ -16,9 +16,9 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'white',
-        borderStyle: 'solid',
-        borderColor: 'gray',
-        borderBottomWidth: 1,
+    },
+    error: {
+        color: 'red',
     },
     //box1-1
     subtitle: {
@@ -29,7 +29,8 @@ export default StyleSheet.create({
         flex: 9,
         backgroundColor: 'white',
         borderStyle: 'solid',
-        borderColor: 'black',
+        borderColor: 'gray',
+        borderTopWidth: 1,
         borderBottomWidth: 1,
     },
     //box2-row1
