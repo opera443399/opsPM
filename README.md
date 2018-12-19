@@ -1,18 +1,21 @@
 # opsPM
+2018/12/19
+
 
 ## init
 
 ```bash
-# react-native init opsPM
-# cd opsPM
+# react-native init yourProjectName
+# cd yourProjectName
+# yarn add react-navigation
+# yarn add react-native-gesture-handler
+# react-native link react-native-gesture-handler
+
 ```
 
-copy the source code from `App.js` and `css.js`
+## run
+copy `App.js` and `css.js` to your project, then run the demo on your simulator or device
 
-then run the demo on your simulator or device:
-```bash
-# react-native run-ios
-```
 
 ## snapshots
 

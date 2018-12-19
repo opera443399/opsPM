@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   ActivityIndicator,
   FlatList,
@@ -8,7 +8,7 @@ import {
   View,
   YellowBox
 } from 'react-native';
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator, createAppContainer } from "react-navigation";
 
 import styles from './css'
 
@@ -22,8 +22,7 @@ const defaultIconProject = '\uD83C\uDFB6';
 const defaultIconLog = '\uD83D\uDCC4';
 const errFetchData = 'failed to fetch data!';
 
-type Props = {};
-class ProjectListScreen extends Component<Props> {
+class ProjectListScreen extends React.Component {
   static navigationOptions = {
     title: 'Project List',
   };
@@ -125,7 +124,7 @@ class ProjectListScreen extends Component<Props> {
   }
 }
 
-class ProjectDetailsScreen extends Component<Props> {
+class ProjectDetailsScreen extends React.Component {
   static navigationOptions = {
     title: 'Project Details',
   };
@@ -229,7 +228,7 @@ class ProjectDetailsScreen extends Component<Props> {
   }
 }
 
-const RootStack = createStackNavigator(
+const AppNavigator = createStackNavigator(
   {
     ProjectList: {
       screen: ProjectListScreen,
@@ -241,7 +240,7 @@ const RootStack = createStackNavigator(
   {
     initialRouteName: 'ProjectList',
 
-    navigationOptions: {
+    defaultNavigationOptions: {
       headerStyle: {
         backgroundColor: '#000',
       },
@@ -253,8 +252,10 @@ const RootStack = createStackNavigator(
   }
 );
 
-export default class App extends Component<Props> {
+const AppContainer = createAppContainer(AppNavigator);
+
+export default class App extends React.Component {
   render() {
-    return <RootStack />;
+    return <AppContainer />;
   }
 }
